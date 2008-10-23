@@ -2,7 +2,13 @@
 # "Simple, Ruby-powered radio automation software"
 # Mattt Thompson, 2008
 
-['rubygems', 'mp3info', 'twitter', 'activesupport', 'pp'].each{|lib| require lib}
+require 'rubygems'
+
+gem 'twitter'
+gem 'ruby-mp3info'
+gem 'activesupport'
+
+['mp3info', 'twitter', 'activesupport', 'pp'].each{|lib| require lib}
 Dir.chdir(File.join(File.expand_path(File.dirname(__FILE__))))
 
 MPG321 = "/opt/local/bin/mpg321"
